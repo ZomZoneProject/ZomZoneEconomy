@@ -34,7 +34,7 @@ public class EconomyAPI implements API {
         try {
             Statement statement = Economy.getInstance().newStatement();
 
-            statement.executeQuery("UPDATE money SET value = " + value + " WHERE uuid = '" + player.getUniqueId() + "';");
+            statement.executeUpdate("UPDATE money SET value = " + value + " WHERE uuid = '" + player.getUniqueId() + "';");
 
             statement.close();
         } catch (SQLException exception) {

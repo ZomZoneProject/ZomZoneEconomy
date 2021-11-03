@@ -23,7 +23,7 @@ public class EventListener implements Listener {
             }
 
             if (!contains) {
-                statement.executeQuery("INSERT INTO money VALUES('" + e.getPlayer().getUniqueId() + "', 0);");
+                statement.executeUpdate("INSERT INTO money VALUES('" + e.getPlayer().getUniqueId() + "', 0);");
             }
 
             statement.close();

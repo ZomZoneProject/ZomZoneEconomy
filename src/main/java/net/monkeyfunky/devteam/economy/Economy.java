@@ -24,11 +24,11 @@ public final class Economy extends JavaPlugin {
         try {
             Class.forName("org.sqlite.JDBC");
 
-            connection = DriverManager.getConnection("jdbc:sqlite:" + new File(getDataFolder(), "npc.db").getAbsolutePath());
+            connection = DriverManager.getConnection("jdbc:sqlite:" + new File(getDataFolder().getParentFile(), "economy.db").getAbsolutePath());
 
             Statement statement = connection.createStatement();
 
-            statement.executeQuery("CREATE TABLE money(uuid text, value integer);");
+            statement.execute("CREATE TABLE money(uuid text, value integer);");
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
