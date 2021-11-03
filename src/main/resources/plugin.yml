@@ -1,0 +1,6 @@
+name: ZomZoneEconomy
+version: '${project.version}'
+main: net.monkeyfunky.devteam.economy.Economy
+api-version: 1.16
+authors: [ eight_y_88 ]
+website: https://monkeyfunky.net
