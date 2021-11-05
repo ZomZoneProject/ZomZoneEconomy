@@ -2,7 +2,10 @@ package net.monkeyfunky.devteam.economy;
 
 import org.bukkit.entity.Player;
 
+import java.util.UUID;
+
 public interface API {
-    int get(Player player);
-    void set(Player player, int value);
+    int get(UUID uuid);
+    void set(UUID uuid, int value);
+    boolean hasAccount(UUID uuid);
 }
