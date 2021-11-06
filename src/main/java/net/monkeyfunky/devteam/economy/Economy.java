@@ -35,7 +35,7 @@ public final class Economy extends JavaPlugin {
 
             Statement statement = connection.createStatement();
 
-            statement.execute("CREATE TABLE money(uuid text, value integer);");
+            statement.execute("CREATE TABLE IF NOT EXISTS money(uuid text, value integer);");
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
