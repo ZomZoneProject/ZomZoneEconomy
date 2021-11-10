@@ -82,4 +82,12 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/zomzoneproject/repo</url>
+        </repository>
+    </distributionManagement>
 </project>

@@ -17,7 +17,7 @@ import java.sql.Statement;
 public final class Economy extends JavaPlugin {
     private static Economy instance;
 
-    private static EconomyAPI api;
+    private API api;
     private Connection connection;
 
     private VaultEconomy economy;
@@ -92,5 +92,10 @@ public final class Economy extends JavaPlugin {
 
     public Statement newStatement() throws SQLException {
         return connection.createStatement();
+    }
+
+    public void setAPI(API api) {
+        this.api = api;
+        economy.setAPI(api);
     }
 }

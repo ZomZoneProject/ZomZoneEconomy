@@ -4,16 +4,19 @@ import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
-import org.bukkit.entity.Player;
 
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
 public class VaultEconomy implements Economy {
-    private final API api;
+    private API api;
 
     public VaultEconomy(API api) {
+        this.api = api;
+    }
+
+    public void setAPI(API api) {
         this.api = api;
     }
 
